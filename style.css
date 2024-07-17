@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-color: black;
+    border: 8px solid rgb(77, 77, 255);
+    border-radius: 5px;
+}
+
+/* Display */
+.display{
+    width: 95%;
+    height:30%;
+    padding: 10px;
+    margin: 10px;
+    border: 4px solid rgb(255, 240, 30) ;
+    border-radius: 10px;
+    background-color: gray;
+    font-size: large;
+    text-align: right;
+    transition: font-size 0.3s ease-in-out;
+    transform: skew(-10deg); /* Skew the container to make the input look like it's leaning forward */
+ 
+    
+}
+
+/* Keypad */
+.block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width: 265px;
+    height: 265px;
+    padding: 5px;
+    margin: 5px;
+    border: 4px solid rgb(0, 255, 14);
+    border-radius: 10px;
+    background-color: rgb(22, 33, 44);
+}
+
+/* Button */
+.button{
+    border-radius: 5px;    
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    padding: 2.5px;
+    margin: 5px 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Define the hover state */
+.button:hover {
+    animation: hoverEffect 0.3s forwards;
+}
+
+/* Define the keyframes for the hover animation */
+@keyframes hoverEffect {
+    0% {
+        background-color: #3498db;
+        transform: scale(1);
+        box-shadow: none;
+    }
+    100% {
+        background-color: #2980b9;
+        transform: scale(1.1);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Define the hover state for the text inside the input box */
+.display:hover {
+    font-size: 30px; /* Increase the font size for the text */
+}
+
+/* Define the hover state for the placeholder text */
+.display:hover::placeholder {
+    transform: scale(1.1); /* Scale up the placeholder text */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the placeholder text */
+}
