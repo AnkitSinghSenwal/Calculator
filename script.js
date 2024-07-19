@@ -20,6 +20,10 @@ Array.from(buttons).forEach((button)=>{
             string = string.concat(ans);        
             document.querySelector('input').value = string;
         }
+        else if (e.target.innerHTML == "EXP"){
+            string = string.concat("10*");
+            document.querySelector('input').value = string;
+        }
         else{
             console.log(e.target.innerHTML)
             string = string + e.target.innerHTML;
@@ -27,3 +31,18 @@ Array.from(buttons).forEach((button)=>{
         }
     })
 })
+
+function playSound(){
+    const sound = document.getElementById("clickSound");
+    sound.play();
+}
+
+function playSoundForEqualTo(){
+    const sound = document.getElementById("soundForEqualTo");
+    sound.play();
+}
+
+function playSoundForAC(){
+    const sound = document.getElementById("soundForAC");
+    sound.play();
+}
