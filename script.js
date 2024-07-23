@@ -46,3 +46,8 @@ function playSoundForAC(){
     const sound = document.getElementById("soundForAC");
     sound.play();
 }
+
+function playSoundForANS(){
+    const sound = document.getElementById("soundForANS");
+    sound.play();
+}
